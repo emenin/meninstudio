@@ -287,7 +287,20 @@ a:hover {
 }
 
 .navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
   width: 100%;
+  padding: 32px 8% 8px;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -322,7 +335,6 @@ a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -24px;
   margin-left: auto;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
@@ -331,12 +343,10 @@ a:hover {
 }
 
 .navigation {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   padding: 24px 8% 0px;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
@@ -515,6 +525,22 @@ a:hover {
   white-space: nowrap;
 }
 
+.navlink.vertical {
+  position: relative;
+  display: block;
+  width: 100px;
+  margin-top: 32px;
+  margin-left: 0px;
+  padding: 0px 0px 0px 16px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
 .buttontext {
   text-transform: uppercase;
 }
@@ -548,6 +574,8 @@ a:hover {
   padding-left: 16px;
   font-family: 'Joules et jaques serif', sans-serif;
   color: #c1604d;
+  font-size: 56px;
+  line-height: 70px;
   font-weight: 700;
 }
 
@@ -751,7 +779,7 @@ a:hover {
 }
 
 .divider.socialmediabar {
-  height: 48px;
+  height: 30%;
   margin-top: 16px;
   margin-bottom: 16px;
 }
@@ -967,7 +995,7 @@ a:hover {
   text-decoration: none;
 }
 
-.navlinktext {
+.nav-link-text {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -980,7 +1008,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-.navlinktext:hover {
+.nav-link-text:hover {
   text-decoration: none;
 }
 
@@ -1808,7 +1836,6 @@ a:hover {
 
 @media screen and (max-width: 991px) {
   body {
-    overflow: visible;
     cursor: default;
   }
 
@@ -1863,6 +1890,10 @@ a:hover {
     line-height: 44px;
   }
 
+  .navbar {
+    overflow: hidden;
+  }
+
   .navwrap {
     padding-right: 8%;
     padding-left: 8%;
@@ -1872,29 +1903,14 @@ a:hover {
     justify-content: center;
   }
 
+  .logo {
+    margin-right: auto;
+  }
+
   .navmenu {
     position: fixed;
-    z-index: 10;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     width: 100vw;
     height: 100vh;
-    margin: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
     background-color: #b5523e;
   }
 
@@ -1964,6 +1980,7 @@ a:hover {
   }
 
   .buttonwrap.large {
+    overflow: hidden;
     margin-top: 24px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2014,6 +2031,7 @@ a:hover {
 
   .column.portfolio {
     display: none;
+    width: 0%;
     padding-right: 8px;
   }
 
@@ -2045,6 +2063,10 @@ a:hover {
     text-align: left;
   }
 
+  .divider.socialmediabar {
+    height: 24%;
+  }
+
   .card {
     margin-right: 16px;
   }
@@ -2066,11 +2088,13 @@ a:hover {
   }
 
   .rotate {
-    top: 18.7vh;
+    top: 7.8vh;
     right: 13%;
+    width: 36%;
+    opacity: 0.1;
   }
 
-  .navlinktext {
+  .nav-link-text {
     color: #fcfbf9;
     font-size: 24px;
     line-height: 32px;
@@ -2119,13 +2143,11 @@ a:hover {
   }
 
   .footer {
-    padding-right: 20px;
     padding-bottom: 0px;
-    padding-left: 20px;
   }
 
   .footerflexcontainer {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 
   .footercolumn {
@@ -2153,7 +2175,12 @@ a:hover {
   }
 
   .dividerfullwidth {
-    margin-left: -20px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .footerwrap {
+    overflow: hidden;
   }
 
   .footerhighlighttext {
@@ -2173,6 +2200,16 @@ a:hover {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .footer-stamp {
+    left: 0%;
+    top: auto;
+    right: auto;
+    bottom: 0%;
+    display: none;
+    width: 1%;
+    max-width: 0%;
   }
 
   .link-website.daztec.mobile {
@@ -2222,11 +2259,15 @@ a:hover {
   }
 
   .progressbar {
+    display: none;
+    overflow: hidden;
+    width: 100vw;
     height: 16px;
   }
 
   .progressbarcontainer {
     display: none;
+    width: 0%;
   }
 
   .cardheading {
@@ -2236,14 +2277,11 @@ a:hover {
 
   .menu-button {
     position: fixed;
-    left: auto;
-    top: 4%;
+    top: 8%;
     right: 4%;
-    bottom: auto;
-    z-index: 10;
     padding: 16px;
     border-radius: 50px;
-    background-color: #fcfbf9;
+    background-color: #fafafa;
   }
 
   .menu-button.w--open {
@@ -2251,6 +2289,7 @@ a:hover {
     top: 4%;
     right: 4%;
     bottom: auto;
+    z-index: 100;
     background-color: #b5523e;
   }
 
@@ -2267,7 +2306,7 @@ a:hover {
 
   .mobilenavimage {
     display: block;
-    width: 22vh;
+    width: 18vw;
     margin-right: auto;
     margin-left: auto;
     padding-top: 6%;
@@ -2288,7 +2327,24 @@ a:hover {
   }
 
   .cursor-wrapper {
+    position: relative;
+    z-index: -1000;
     display: none;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+
+  .innerdot {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+
+  .outercircle {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
   }
 
   .heroheading.adjust {
@@ -2484,12 +2540,17 @@ a:hover {
     align-self: center;
   }
 
+  .navlink.vertical {
+    margin-top: 64px;
+  }
+
   .buttontext {
     line-height: 165%;
   }
 
   .hero {
     height: 80vh;
+    padding-top: 24px;
   }
 
   .herowrap {
@@ -2503,6 +2564,7 @@ a:hover {
   .typed-words {
     height: 70px;
     padding-left: 0px;
+    font-size: 48px;
   }
 
   .buttonwrap.large {
@@ -2630,6 +2692,10 @@ a:hover {
     width: 1px;
     height: 98%;
     margin-left: 7px;
+  }
+
+  .divider.socialmediabar {
+    height: 40%;
   }
 
   .divider.progress {
@@ -2777,7 +2843,11 @@ a:hover {
   }
 
   .socialmediamenu {
-    height: 80%;
+    height: 100%;
+  }
+
+  .navmobile {
+    display: block;
   }
 
   .processwrap.spacebottom {
@@ -2854,7 +2924,7 @@ a:hover {
 
 @media screen and (max-width: 479px) {
   body {
-    background-position: 0% 0%;
+    background-position: 50% 0%;
   }
 
   h1 {
@@ -2865,7 +2935,7 @@ a:hover {
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 33px;
   }
 
@@ -2894,13 +2964,18 @@ a:hover {
     font-size: 15px;
   }
 
+  .section {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
   .section.process {
     padding-top: 0px;
     padding-bottom: 0px;
   }
 
   .container {
-    margin-top: 16px;
+    margin-top: 24px;
   }
 
   .container.portfolio {
@@ -2927,6 +3002,7 @@ a:hover {
   .h2display {
     margin-bottom: 8px;
     line-height: 40px;
+    font-weight: 700;
   }
 
   .utility-page-wrap {
@@ -2938,6 +3014,12 @@ a:hover {
     width: auto;
   }
 
+  .navbar {
+    padding-top: 40px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
   .navwrap {
     padding-left: 4%;
     -webkit-box-pack: start;
@@ -2946,12 +3028,28 @@ a:hover {
     justify-content: flex-start;
   }
 
+  .logo {
+    width: 32%;
+  }
+
+  .navmenu {
+    overflow: hidden;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .navigation {
+    z-index: 1000;
+  }
+
   .button {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin-top: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -2964,6 +3062,8 @@ a:hover {
   .button.secondary {
     margin-top: 0px;
     margin-left: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     -ms-grid-row-align: auto;
@@ -2991,9 +3091,28 @@ a:hover {
     padding-bottom: 24px;
   }
 
+  .navlink.socialmedia {
+    height: auto;
+    margin-top: 25px;
+    padding-bottom: 83px;
+  }
+
+  .navlink.vertical {
+    width: 108px;
+    padding-left: 24px;
+    opacity: 0.9;
+  }
+
+  .buttontext {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
   .hero {
-    height: 72vh;
+    overflow: hidden;
+    height: auto;
     margin-bottom: 64px;
+    padding-top: 0px;
     padding-right: 2%;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
@@ -3001,8 +3120,20 @@ a:hover {
     align-items: flex-start;
   }
 
+  .herowrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
   .typed-words {
-    height: 50px;
+    width: auto;
+    height: 48px;
+    padding-left: 16px;
+    font-size: 35px;
+    line-height: 145%;
   }
 
   .buttonwrap {
@@ -3013,15 +3144,17 @@ a:hover {
   }
 
   .buttonwrap.large {
+    width: 70%;
+    margin-top: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
 
   .buttonwrap.centermobile {
@@ -3111,6 +3244,7 @@ a:hover {
 
   .paragraphcenter {
     line-height: 120%;
+    letter-spacing: 0px;
   }
 
   .divider {
@@ -3118,11 +3252,13 @@ a:hover {
   }
 
   .divider.socialmediabar {
-    height: 40%;
+    height: 30%;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 
   .divider.progress {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   .card {
@@ -3177,17 +3313,14 @@ a:hover {
   }
 
   .rotate {
-    top: 11.9vh;
-    right: 7%;
-    width: 30%;
-    opacity: 0.19;
+    top: 9.2vh;
+    right: 8%;
+    z-index: -10;
+    width: 36%;
+    opacity: 0.1;
     -webkit-transform: rotate(9deg);
     -ms-transform: rotate(9deg);
     transform: rotate(9deg);
-  }
-
-  .navlinktext.w--current {
-    font-size: 18px;
   }
 
   .testimonialslider {
@@ -3200,18 +3333,30 @@ a:hover {
     margin-bottom: 16px;
   }
 
+  .icon.small {
+    height: auto;
+  }
+
+  .leftarrow {
+    height: 10%;
+  }
+
   .leftarrow.portfolio {
-    left: 36%;
+    left: 0px;
     top: auto;
-    right: 0%;
-    bottom: -32px;
+    right: auto;
+    bottom: -16%;
+  }
+
+  .rightarrow {
+    height: 10%;
   }
 
   .rightarrow.portfolio {
     left: auto;
     top: auto;
     right: 0%;
-    bottom: -32px;
+    bottom: -17%;
   }
 
   .mask {
@@ -3346,22 +3491,42 @@ a:hover {
   }
 
   .visit-website-badge {
-    width: 20vw;
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: 0%;
+    bottom: 0%;
+    width: 28vw;
     max-width: none;
   }
 
   .bottomnav {
     display: none;
+    width: 0px;
   }
 
   .socialmediamenu {
-    height: 100%;
-    margin-bottom: 4px;
+    width: 36px;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 4px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
   }
 
   .cardheading {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  .menu-button {
+    top: 6%;
   }
 
   .mobilenavimage {
@@ -3400,25 +3565,39 @@ a:hover {
     margin-left: 0px;
   }
 
+  .cursor-wrapper {
+    position: static;
+    left: 0%;
+    top: 0%;
+    right: auto;
+    bottom: auto;
+    width: 0px;
+    height: 0px;
+  }
+
   .heroheading {
-    width: 95%;
-    font-size: 40px;
-    line-height: 120%;
-    font-weight: 400;
+    width: auto;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    font-size: 35px;
+    line-height: 145%;
+    font-weight: 700;
+    text-align: left;
   }
 
   .heroheading.adjust {
-    width: 90%;
-    margin-bottom: 16px;
+    width: 80%;
+    margin-bottom: 12px;
   }
 
   .text-block {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .slidernav {
-    bottom: -5%;
-    display: none;
+    bottom: -16%;
+    padding-top: 8px;
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
@@ -3447,7 +3626,7 @@ a:hover {
   }
 
   .navlogo {
-    width: 120px;
+    position: relative;
   }
 
   .headingerror {
@@ -3464,6 +3643,14 @@ a:hover {
     left: 9%;
     top: 21%;
     width: 16%;
+  }
+
+  .testimonialparagraph {
+    margin-bottom: 32px;
+  }
+
+  .div-block {
+    width: auto;
   }
 }
 
