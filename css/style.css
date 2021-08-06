@@ -1,7 +1,7 @@
 body {
   padding-right: 0px;
   padding-left: 0px;
-  background-image: url('../images/shadow-background.png');
+  background-image: url("../images/shadow-background.png");
   background-position: 0px 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@ h1 {
   width: 64%;
   margin-top: 0px;
   margin-bottom: 8px;
-  font-family: 'Joules et jaques serif', sans-serif;
+  font-family: "Joules et jaques serif", sans-serif;
   color: #4f4f4f;
   font-size: 56px;
   line-height: 72px;
@@ -27,7 +27,7 @@ h1 {
 h2 {
   margin-top: 8px;
   margin-bottom: 16px;
-  font-family: 'Joules et jaques serif', sans-serif;
+  font-family: "Joules et jaques serif", sans-serif;
   color: #4f4f4f;
   font-size: 56px;
   line-height: 115%;
@@ -37,7 +37,7 @@ h2 {
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-family: 'Joules et jaques serif', sans-serif;
+  font-family: "Joules et jaques serif", sans-serif;
   color: #4f4f4f;
   font-size: 32px;
   line-height: 48px;
@@ -106,7 +106,7 @@ a:hover {
 .container {
   position: relative;
   height: auto;
-  max-width: 1140px;
+  max-width: 1200px;
   margin-top: 88px;
   margin-bottom: 164px;
   -webkit-box-flex: 1;
@@ -173,14 +173,14 @@ a:hover {
 }
 
 .h2display {
-  font-family: 'Joules et jaques serif', sans-serif;
+  font-family: "Joules et jaques serif", sans-serif;
   font-size: 48px;
   line-height: 56px;
   font-weight: 400;
 }
 
 .overline {
-  font-family: 'Joules et jaques serif', sans-serif;
+  font-family: "Joules et jaques serif", sans-serif;
   color: #4f4f4f;
   font-size: 24px;
   line-height: 28px;
@@ -271,7 +271,7 @@ a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1140px;
+  max-width: 1200px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -440,8 +440,8 @@ a:hover {
 .button.ghost.smallcaps {
   margin-top: 0px;
   margin-bottom: 8px;
-  -webkit-transition-timing-function: cubic-bezier(.55, .085, .68, .53);
-  transition-timing-function: cubic-bezier(.55, .085, .68, .53);
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -572,7 +572,7 @@ a:hover {
 
 .typed-words {
   padding-left: 16px;
-  font-family: 'Joules et jaques serif', sans-serif;
+  font-family: "Joules et jaques serif", sans-serif;
   color: #c1604d;
   font-size: 56px;
   line-height: 70px;
@@ -1226,7 +1226,7 @@ a:hover {
 }
 
 .footerhighlightjoules {
-  font-family: 'Joules et jaques serif', sans-serif;
+  font-family: "Joules et jaques serif", sans-serif;
   color: #fcfbf9;
   font-size: 16px;
   font-weight: 700;
@@ -1447,7 +1447,7 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
   -webkit-box-pack: justify;
@@ -2381,27 +2381,27 @@ a:hover {
   }
 
   .portfolioslide {
-    background-image: url('../images/mud-portfolio.png');
+    background-image: url("../images/mud-portfolio.png");
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   .portfolioslide._2 {
-    background-image: url('../images/cloud-portfolio-mobile.png');
+    background-image: url("../images/cloud-portfolio-mobile.png");
     background-position: 70% 50%;
   }
 
   .portfolioslide._3 {
-    background-image: url('../images/essina-portfolio.png');
+    background-image: url("../images/essina-portfolio.png");
   }
 
   .portfolioslide._4 {
-    background-image: url('../images/daztec-portfolio-mobile.png');
+    background-image: url("../images/daztec-portfolio-mobile.png");
   }
 
   .portfolioslide._5 {
-    background-image: url('../images/purest-portfolio.png');
+    background-image: url("../images/purest-portfolio.png");
   }
 
   .image-3 {
@@ -2417,7 +2417,7 @@ a:hover {
     height: 400px;
     padding-right: 0px;
     padding-bottom: 0px;
-    background-image: url('../images/mud-portfolio.png');
+    background-image: url("../images/mud-portfolio.png");
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -2909,7 +2909,7 @@ a:hover {
   }
 
   .portfolioslide._2 {
-    background-image: url('../images/cloud-portfolio-mobile.png');
+    background-image: url("../images/cloud-portfolio-mobile.png");
   }
 
   .portfolioslider {
@@ -3609,7 +3609,7 @@ a:hover {
   }
 
   .portfolioslide._2 {
-    background-image: url('../images/cloud-portfolio-mobile.png');
+    background-image: url("../images/cloud-portfolio-mobile.png");
     background-position: 0% 0%;
     background-size: contain;
   }
@@ -3655,15 +3655,15 @@ a:hover {
 }
 
 @font-face {
-  font-family: 'Joules et jaques serif';
-  src: url('../fonts/Joules-et-Jaques-Serif-Bold.otf') format('opentype');
+  font-family: "Joules et jaques serif";
+  src: url("../fonts/Joules-et-Jaques-Serif-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Joules et jaques serif';
-  src: url('../fonts/Joules-et-Jaques-Serif.otf') format('opentype');
+  font-family: "Joules et jaques serif";
+  src: url("../fonts/Joules-et-Jaques-Serif.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
