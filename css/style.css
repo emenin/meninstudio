@@ -1393,6 +1393,7 @@ a:hover {
   left: 57%;
   top: 3%;
   bottom: auto;
+  z-index: 1;
   width: 156px;
 }
 
